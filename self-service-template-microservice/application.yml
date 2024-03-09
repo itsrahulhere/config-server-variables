@@ -1,9 +1,9 @@
 server:
-  port: 6012
+  port: 6011
 
 spring:
   application:
-    name: self-service-user-management-microservice
+    name: self-service-template-microservice
   datasource:
     hikari:
       maximum-pool-size: 5
@@ -11,6 +11,11 @@ spring:
   tomcat:
     max-swallow-size: -1
     max-http-form-post-size: -1
+  servlet:
+    multipart:
+      max-request-size: 10GB
+      max-file-size: 10GB
+      enabled: true
 
   jpa:
     properties:

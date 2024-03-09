@@ -7,12 +7,6 @@ logging:
     org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
     org.springframework.cloud.gateway: TRACE
 
-jwt:
-  auth:
-    converter:
-      resource-id: cdcp
-      principal-attribute: preferred_username
-
 spring:
   application:
     name: api-gateway
@@ -35,10 +29,8 @@ spring:
           predicates:
             - Path= /v1/api/user-mgmt/**
 
-  security:
-    oauth2:
-      client:
-      resourceserver:
-        jwt:
-          issuer-uri: http://20.219.56.2:30435/auth/realms/nagarro_cdcp
-          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+jwt:
+  auth:
+    converter:
+      resource-id: cdcp
+      principal-attribute: preferred_username
