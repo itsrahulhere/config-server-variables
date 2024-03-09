@@ -1,0 +1,44 @@
+server:
+  port: 8082
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
+    org.springframework.cloud.gateway: TRACE
+
+jwt:
+  auth:
+    converter:
+      resource-id: cdcp
+      principal-attribute: preferred_username
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: self-service-file-microservice
+          uri: lb://self-service-file-microservice
+          predicates:
+            - Path= /v1/api/uploader/**,/v1/api/file-services/**
+        - id: self-service-template-microservice
+          uri: lb://self-service-template-microservice
+          predicates:
+            - Path= /v1/api/template/**,/v1/api/data-processor**,/v1/api/oracle-db**,/v1/api/sanity-rules**,/v1/api/transformation-rules
+        - id: self-service-user-management-microservice
+          uri: lb://self-service-user-management-microservice
+          predicates:
+            - Path= /v1/api/user-mgmt/**
+
+  security:
+    oauth2:
+      client:
+      resourceserver:
+        jwt:
+          issuer-uri: http://20.219.56.2:30435/auth/realms/nagarro_cdcp
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
