@@ -32,3 +32,6 @@ spring:
 springdoc:
   api-docs:
     path: /api/v1/api-docs
+
+info:
+  username: akshay
