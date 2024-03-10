@@ -1,13 +1,6 @@
 server:
   port: 6012
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
 spring:
   application:
     name: self-service-user-management-microservice
@@ -32,4 +25,3 @@ spring:
 springdoc:
   api-docs:
     path: /api/v1/api-docs
-
