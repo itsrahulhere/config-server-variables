@@ -1,9 +1,6 @@
 server:
   port: 6012
 
-msg:
-  username: akshay
-
 eureka:
   instance:
     hostname: localhost
