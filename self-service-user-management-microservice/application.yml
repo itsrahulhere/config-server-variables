@@ -24,4 +24,4 @@ spring:
 
 springdoc:
   api-docs:
-    path: /api/v1/api-docs
+    path: /swagger/api/v1/api-docs
