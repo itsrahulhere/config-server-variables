@@ -17,17 +17,6 @@ spring:
           enabled: true
       globalcors:
         add-to-simple-url-handler-mapping: true
-      # globalCors:
-      #   corsConfigurations:
-      #     "[/**]":
-      #       allowedOrigins: "http://localhost:3000,http://127.0.0.1:3000"
-      #       allowedHeaders: "Authorization,Content-Type"
-      #       allowedMethods:
-      #         - GET
-      #         - POST
-      #         - DELETE
-      #         - PUT
-      #         - OPTIONS
       routes:
         - id: self-service-file-microservice
           uri: lb://self-service-file-microservice
