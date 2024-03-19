@@ -30,3 +30,7 @@ spring:
           uri: lb://self-service-user-management-microservice
           predicates:
             - Path= /v1/api/user-mgmt/**
+
+info:
+  application:
+    webPortalOrigin: http://localhost:3000,http://20.219.56.2:30000,https://frontend-service-kislay99-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/
