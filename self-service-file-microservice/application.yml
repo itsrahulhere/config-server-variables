@@ -7,6 +7,9 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 5
+  devtools:
+    restart:
+      enabled: true
   tomcat:
     max-swallow-size: -1
     max-http-form-post-size: -1

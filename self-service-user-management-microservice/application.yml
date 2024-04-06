@@ -7,7 +7,9 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 5
-
+  devtools:
+    restart:
+      enabled: true
   tomcat:
     max-swallow-size: -1
     max-http-form-post-size: -1
@@ -25,9 +27,9 @@ spring:
       hibernate:
         naming:
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
+        # dialect: org.hibernate.dialect.PostgreSQLDialect
+    # hibernate:
+    # ddl-auto: update
     show-sql: false
 
 jwt:
