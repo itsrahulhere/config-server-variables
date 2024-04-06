@@ -17,5 +17,5 @@ spring:
     datasource:
       driver-class-name: oracle.jdbc.OracleDriver
       jdbc-url: jdbc:oracle:thin:@localhost:1521/cdcp
-      password: sys
-      username: Rani19980429@#1
+      password: Rani19980429@#1
+      username: sys
