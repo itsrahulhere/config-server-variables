@@ -25,11 +25,15 @@ spring:
         - id: self-service-template-microservice
           uri: lb://self-service-template-microservice
           predicates:
-            - Path= /v1/api/template/**,/v1/api/data-processor**,/v1/api/oracle-db**,/v1/api/sanity-rules**,/v1/api/transformation-rules
+            - Path= /v1/api/template/**,/v1/api/data-processor**,/v1/api/sanity-rules**,/v1/api/transformation-rules
         - id: self-service-user-management-microservice
           uri: lb://self-service-user-management-microservice
           predicates:
             - Path= /v1/api/user-mgmt/**
+        - id: self-service-oracle-template-microservice
+          uri: lb://self-service-oracle-template-microservice
+          predicates:
+            - Path= /v1/api/oracle-db/**
 
 info:
   application:
