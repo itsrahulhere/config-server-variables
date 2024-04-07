@@ -11,11 +11,15 @@ application:
     cleansing-station-url: http://localhost:6011/api/cleansing-station
 
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    jdbc-url: jdbc:postgresql://localhost:5432/dhl_microservice?stringtype=unspecified
-    password: root
-    username: postgres
+  postgres:
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/dhl_microservice?stringtype=unspecified
+      password: root
+      username: postgres
+      database: dhl_microservice
+      port: 5432
+      dbHost: localhost
 
   security:
     oauth2:
@@ -30,3 +34,14 @@ jwt:
     converter:
       resource-id: cdcp
       principal-attribute: preferred_username
+
+airflow:
+  url: http://20.55.72.143
+  username: akshay.adme
+  password: akshay@1234
+  dag-name: self_service
+
+hdfs:
+  base-url: hdfs://20.55.72.143:9000
+  username: cdcpuser
+  web-url: https://20.55.72.143:14000/webhdfs/v1/

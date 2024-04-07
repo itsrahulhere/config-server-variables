@@ -6,11 +6,15 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    jdbc-url: jdbc:postgresql://localhost:5432/dhl_microservice?stringtype=unspecified
-    password: root
-    username: postgres
+  postgres:
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/dhl_microservice?stringtype=unspecified
+      password: root
+      username: postgres
+      database: dhl_microservice
+      port: 5432
+      dbHost: localhost
 
   security:
     oauth2:
