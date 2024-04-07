@@ -6,7 +6,13 @@ spring:
     name: self-service-oracle-template-microservice
   datasource:
     hikari:
-      maximum-pool-size: 5
+      connectionTimeout: 30000
+      idleTimeout: 10000
+      maxLifetime: 10000
+      keepaliveTime: 5000
+      maximumPoolSize: 20
+      minimumIdle: 5
+      pool-name: self-service-oracle-template-microservice
   devtools:
     restart:
       enabled: true
@@ -18,28 +24,21 @@ spring:
       max-request-size: 10GB
       max-file-size: 10GB
       enabled: true
-  security:
-    oauth2:
-      client:
-      resourceserver:
-        jwt:
-          issuer-uri: http://20.219.56.2:30435/auth/realms/nagarro_cdcp
-          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+  # security:
+  #   oauth2:
+  #     client:
+  #     resourceserver:
+  #       jwt:
+  #         issuer-uri: http://20.219.56.2:30435/auth/realms/nagarro_cdcp
+  #         jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   jpa:
-    # properties:
-    #   hibernate:
-    #     naming:
-    #       physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    #     dialect: org.hibernate.dialect.PostgreSQLDialect
-    # hibernate:
-    #   ddl-auto: update
     show-sql: false
 
-jwt:
-  auth:
-    converter:
-      resource-id: cdcp
-      principal-attribute: preferred_username
+# jwt:
+#   auth:
+#     converter:
+#       resource-id: cdcp
+#       principal-attribute: preferred_username
 
 springdoc:
   api-docs:
