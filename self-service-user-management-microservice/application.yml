@@ -1,5 +1,7 @@
 server:
-  port: 6012
+  port: 0
+  servlet:
+    contextPath: /ssp-user-mgmt-service
 
 spring:
   application:
