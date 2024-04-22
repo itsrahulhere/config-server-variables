@@ -26,7 +26,7 @@ spring:
         - id: self-service-template-microservice
           uri: lb://self-service-template-microservice
           predicates:
-            - Path= /ssp-template-service/v1/api/template/**,/ssp-template-service/v1/api/data-processor**,/ssp-template-service/v1/api/sanity-rules**,/ssp-template-service/v1/api/transformation-rules
+            - Path= /ssp-template-service/v1/api/template/**,/ssp-template-service/v1/api/data-processor/**,/ssp-template-service/v1/api/sanity-rules/**,/ssp-template-service/v1/api/transformation-rules/**
         - id: self-service-user-management-microservice
           uri: lb://self-service-user-management-microservice
           predicates:
