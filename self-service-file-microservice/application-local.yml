@@ -45,3 +45,7 @@ hdfs:
   base-url: hdfs://20.55.72.143:9000
   username: cdcpuser
   web-url: https://20.55.72.143:14000/webhdfs/v1/
+
+openapi:
+  info:
+    server: http://localhost:8082/ssp-file-mgmt-service

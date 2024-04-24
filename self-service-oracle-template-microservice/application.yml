@@ -33,3 +33,13 @@ spring:
 springdoc:
   api-docs:
     path: /swagger/api/v1/api-docs
+
+openapi:
+  info:
+    title: "SSP Oracle Template Service API"
+    version: "v_1.0"
+    ownerName: "Akshay Adme"
+    ownerEmail: "akshay.adme@nagarro.com"
+    termsOfService: "http://dhl.io/terms/"
+    licenseName: "Apache 2.0"
+    licenseUrl: "http://www.apache.org/licenses/LICENSE-2.0.html"
