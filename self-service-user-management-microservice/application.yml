@@ -42,3 +42,7 @@ openapi:
     termsOfService: "http://dhl.io/terms/"
     licenseName: "Apache 2.0"
     licenseUrl: "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+http:
+  security:
+    allowRequests: /swagger/**,/swagger-ui/**,/v1/api/user-mgmt/**
