@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    contextPath: /ssp-oracle-template-service
+    contextPath: /self-service-oracle-template-microservice
 
 spring:
   application:

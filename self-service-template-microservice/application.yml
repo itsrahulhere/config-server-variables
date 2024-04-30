@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    contextPath: /ssp-template-service
+    contextPath: /self-service-template-microservice
 
 spring:
   application:

@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    contextPath: /ssp-file-mgmt-service
+    contextPath: /self-service-file-microservice
 spring:
   application:
     name: self-service-file-microservice

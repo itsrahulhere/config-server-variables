@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    contextPath: /ssp-user-mgmt-service
+    contextPath: /self-service-user-management-microservice
 
 spring:
   application:
