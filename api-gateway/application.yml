@@ -22,19 +22,19 @@ spring:
         - id: self-service-file-microservice
           uri: lb://self-service-file-microservice
           predicates:
-            - Path= /ssp-file-mgmt-service/v1/api/uploader/**,/ssp-file-mgmt-service/v1/api/file-services/**
+            - Path= /self-service-file-microservice/v1/api/uploader/**,/self-service-file-microservice/v1/api/file-services/**
         - id: self-service-template-microservice
           uri: lb://self-service-template-microservice
           predicates:
-            - Path= /ssp-template-service/v1/api/template/**,/ssp-template-service/v1/api/data-processor/**,/ssp-template-service/v1/api/sanity-rules/**,/ssp-template-service/v1/api/transformation-rules/**
+            - Path= /self-service-template-microservice/v1/api/template/**,/self-service-template-microservice/v1/api/data-processor/**,/self-service-template-microservice/v1/api/sanity-rules/**,/self-service-template-microservice/v1/api/transformation-rules/**
         - id: self-service-user-management-microservice
           uri: lb://self-service-user-management-microservice
           predicates:
-            - Path= /ssp-user-mgmt-service/v1/api/user-mgmt/**
+            - Path= /self-service-user-management-microservice/v1/api/user-mgmt/**
         - id: self-service-oracle-template-microservice
           uri: lb://self-service-oracle-template-microservice
           predicates:
-            - Path= /ssp-oracle-template-service/v1/api/oracle-db/**
+            - Path= /self-service-oracle-template-microservice/v1/api/oracle-db/**
 
 info:
   application:
