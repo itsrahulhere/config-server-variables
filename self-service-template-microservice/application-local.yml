@@ -32,4 +32,4 @@ jwt:
 
 openapi:
   info:
-    server: http://localhost:8082/ssp-template-service
+    server: http://localhost:8082/self-service-template-microservice

@@ -28,4 +28,4 @@ jwt:
 
 openapi:
   info:
-    server: http://localhost:8082/ssp-oracle-template-service
+    server: http://localhost:8082/self-service-oracle-template-microservice
