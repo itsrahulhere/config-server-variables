@@ -25,19 +25,19 @@ spring:
       client:
       resourceserver:
         jwt:
-          issuer-uri: http://20.219.56.2:30249/realms/nagarro_cdcp
+          issuer-uri: http://localhost:8080/realms/nagarro_cdcp
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
 
 keycloak:
   admin:
     client: cdcp-admin
-    client-secret: YhiWBvhXJWDHQnIvLO7ipVkOw6wZnAgi
+    client-secret: ip9GCei3ewI3I9EC5xZxvs8Hf3a9vFYs
 
-  url: http://20.219.56.2:30249
+  url: http://localhost:8080
   realm: nagarro_cdcp
-  issuer-uri: http://20.219.56.2:30249/realms/nagarro_cdcp
+  issuer-uri: http://localhost:8080/realms/nagarro_cdcp
   client: cdcp
-  client-secret: zGTSQK9Vv2Xm9PrYqS2P5oUDgzIBd9E8
+  client-secret: 48tUhS0rh3dKMkGjPSEBtbAzkPBez9VU
 
 jwt:
   auth:
