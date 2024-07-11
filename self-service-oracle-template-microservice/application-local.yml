@@ -8,10 +8,13 @@ eureka:
 spring:
   db:
     datasource:
-      driver-class-name: oracle.jdbc.OracleDriver
-      jdbc-url: jdbc:oracle:thin:@localhost:1521:ORCL
-      password: rootuser
-      username: c##cdcp_usr_mgmt
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/dhl_microservice_orcl?stringtype=unspecified
+      password: root
+      username: postgres
+      database: dhl_microservice_orcl
+      port: 5432
+      dbHost: localhost
   security:
     oauth2:
       client:
