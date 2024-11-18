@@ -73,3 +73,7 @@ openapi:
 http:
   security:
     allowRequests: /swagger/**,/swagger-ui/**,/v1/api/user-mgmt/**
+upload:
+  maxFileSize:
+    xlsx: 800
+    csv: 2048
